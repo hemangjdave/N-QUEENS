@@ -1,0 +1,33 @@
+{
+  "info": {
+    "_postman_id": "507df335-ec43-4845-97aa-43bec0c17a20",
+    "name": "n-queens",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "getQueensCoordinates",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/getQueens?queenNumber=8",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "getQueens"
+          ],
+          "query": [
+            {
+              "key": "queenNumber",
+              "value": "8"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

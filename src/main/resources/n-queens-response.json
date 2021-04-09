@@ -1,0 +1,34 @@
+[
+  {
+    "ycoordinate": 0,
+    "xcoordinate": 0
+  },
+  {
+    "ycoordinate": 1,
+    "xcoordinate": 4
+  },
+  {
+    "ycoordinate": 2,
+    "xcoordinate": 7
+  },
+  {
+    "ycoordinate": 3,
+    "xcoordinate": 5
+  },
+  {
+    "ycoordinate": 4,
+    "xcoordinate": 2
+  },
+  {
+    "ycoordinate": 5,
+    "xcoordinate": 6
+  },
+  {
+    "ycoordinate": 6,
+    "xcoordinate": 1
+  },
+  {
+    "ycoordinate": 7,
+    "xcoordinate": 3
+  }
+]

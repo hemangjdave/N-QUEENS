@@ -4,9 +4,7 @@ import com.techrevolution.nqueens.model.Coordinates;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 import java.util.function.BiPredicate;
 
 @Component
@@ -14,8 +12,8 @@ import java.util.function.BiPredicate;
 public class QueensBoardUpdated {
 
     private  char[][] queens;
-    private Stack<Coordinates> stack = new Stack<>();
-    private List<Coordinates> list = new ArrayList<>();
+    private final Deque<Coordinates> stack = new ArrayDeque<>();
+    private List<Coordinates> list = null;
     private int successCount;
     private Coordinates defaultCoordinates;
 
@@ -23,15 +21,14 @@ public class QueensBoardUpdated {
     }
 
     public void initializedQueensBoard(int size) {
-        stack = new Stack<>();
-        list = new ArrayList<>();
+        this.queens = new char[size][size];
+        stack.clear();
+        list = new ArrayList<>(queens.length);
         successCount=0;
         defaultCoordinates = new Coordinates(0, 0);
-        this.queens = null;
-        this.queens = new char[size][size];
     }
 
-    private boolean isInitializedCordinates(Coordinates coordinates) {
+    private boolean isInitializedCoordinates(Coordinates coordinates) {
         return coordinates.getXCoordinate() == 0 && coordinates.getYCoordinate() == 0;
     }
 
@@ -46,7 +43,7 @@ public class QueensBoardUpdated {
     }
 
     private boolean ensureValidCoordinates(Coordinates coordinates, BiIntPredicate predicate, CustomIntFunction function) {
-        if (isInitializedCordinates(coordinates)) {
+        if (isInitializedCoordinates(coordinates)) {
             return true;
         }
         var xAxis = coordinates.getXCoordinate();
