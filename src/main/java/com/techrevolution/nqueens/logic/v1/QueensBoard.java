@@ -1,4 +1,4 @@
-package com.techrevolution.nqueens.logic;
+package com.techrevolution.nqueens.logic.v1;
 
 import com.techrevolution.nqueens.model.Coordinates;
 

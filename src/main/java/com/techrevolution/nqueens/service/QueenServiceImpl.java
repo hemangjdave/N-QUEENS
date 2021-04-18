@@ -1,6 +1,6 @@
 package com.techrevolution.nqueens.service;
 
-import com.techrevolution.nqueens.logic.QueensBoardUpdated;
+import com.techrevolution.nqueens.logic.v1.QueensBoardUpdated;
 import com.techrevolution.nqueens.model.Coordinates;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
